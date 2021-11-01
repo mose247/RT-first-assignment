@@ -127,9 +127,15 @@ In order to get the robot close to a target, the method `reach_target()` impleme
 #### _reach_target()_ pseudo-code:
 ````
 function reach_target(target_coord):
-    target_angular_po:
-    turn_ang(target_angular_position)
+    target_coordinates= serach_target()
+    dist= target_coordinates[0]
+    angle= target_coordinates[1]
+    turn_ang(angle)
     
+    while(dist is not small enough) do
+        drive()
+        update dist
+  
 end function
 ````
 
