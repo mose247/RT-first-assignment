@@ -25,7 +25,7 @@ function main():
                 reach_target()
                 move_behind()
             else
-                drive_forward()
+                drive()
             end if
         else
             dist_r= search_obstacle(right)
@@ -139,7 +139,7 @@ function reach_target(target_coord):
 end function
 ````
 
-Finally, in order to move the target behind the robot it has been defined a simple method that uses the functions `grab()` and `release()` already provided by the simulator library.
+Finally, in order to move the target behind the robot, it has been defined a simple method that uses the functions `grab()` and `release()` already provided by the simulator library.
 #### _move_behind()_ pseudo-code:
 ```` python
 function move_behind():
