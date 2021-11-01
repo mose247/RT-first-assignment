@@ -125,7 +125,7 @@ In this last paragraph are presented the functions `reach_target()` and `move_be
 In order to get the robot close to a target, the method `reach_target()` implements a _turn-then-move_ approach. This means that, once that a target is detected, the robot firstly turns in place to match the correct angle and then drives forward until it is close enough to it.
 
 #### _reach_target()_ pseudo-code:
-````
+```` python
 function reach_target(target_coord):
     target_coordinates= serach_target()
     dist= target_coordinates[0]
@@ -141,7 +141,7 @@ end function
 
 Finally, in order to move the target behind the robot it has been defined a simple method that uses the functions `grab()` and `release()` already provided by the simulator library.
 #### _move_behind()_ pseudo-code:
-````
+```` python
 function move_behind():
     grab()
     turn_ang(180)
