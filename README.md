@@ -130,14 +130,26 @@ function reach_target(target_coord):
     target_coordinates= serach_target()
     dist= target_coordinates[0]
     angle= target_coordinates[1]
-    turn_ang(angle)
     
+    turn_ang(angle)
     while(dist is not small enough) do
         drive()
         update dist
   
 end function
 ````
+
+Finally, in order to move the target behind the robot it has been defined a simple method that uses the functions `grab()` and `release()` already provided by the simulator library.
+#### _move_behind()_ pseudo-code:
+````
+function move_behind():
+    grab()
+    turn_ang(180)
+    release()
+    turn_ang(-180)
+end function
+````
+
 
 
 
