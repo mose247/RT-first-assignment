@@ -122,7 +122,7 @@ end function
 ## Functions for interacting with targets
 In this last paragraph are presented the functions `reach_target()` and `move_behind()`, that have been developed to reach and move a target behind once it has been detected.
 
-In order to get the robot close to a target, the method `reach_target()` implements a _turn-then-move_ approach. This means that, once that a target is detected, the robot firstly turns in place to match the correct angle and then drives forward until it is close enough to it.
+In order to get the robot close to a target, the method `reach_target()` implements a _turn-then-drive_ approach. This means that, once that a target is detected, the robot firstly turns in place to match the correct angle and then drives forward until it is close enough to it.
 
 #### _reach_target()_ pseudo-code:
 ```` python
