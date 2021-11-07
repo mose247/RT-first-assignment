@@ -98,11 +98,11 @@ The attributes above are used by the functions `search_obstacle()` and `search_t
 function search_obstacle(direction):
         dist= 100
         
-        if(direction == "forward") do
+        if(direction is "forward") do
             define forward angular range
-        else if(direction == "left")
+        else if(direction is "left")
             define left angular range
-        else if(direction == "right")
+        else if(direction is "right")
             define right angular range
         end if
         
