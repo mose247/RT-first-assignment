@@ -39,7 +39,7 @@ function main():
     end while
 end function
 ````
-In order to maintain the code simple and easily readable, all the necessary sub-tasks such as obstacles detection, targets interaction and motion have been implemented by some separate functions that are called back in the `main()`.
+In order to maintain the code simple and easily readable, all the necessary sub-tasks such as obstacles detection, targets interaction and motion have been implemented by some separate functions that are called back in the `main()`. The next paragraphs will focus on the explaination of these functions.
 
 ## Functions for moving the robot
 To drive the robot around the circuit have been developed three functions: `drive()`, `turn()` and `turn_ang()`. The first two are basic methods that are used, respectively, to make the robot move forward and turn in place by providing the wheels' speed and the time interval to maintain it. For instance, the following example shows how to use them to make the robot drive forward for 1 second and then turn in place for the same time interval by setting the motors at half of their power:
