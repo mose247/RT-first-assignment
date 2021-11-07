@@ -51,7 +51,7 @@ turn(speed, dt)
 ````
 Instead, `turn_ang()` is a more complex function that has been implemented to make the robot turn of a precise angle with respect its current position. This is useful in all those situations, such as moving towards a target, in which it is convenient to have an accurate control on the direction faced by the robot inside the arena.
 
-In order to obtain this behaviour it has been necessary to implement a PD controller that regulates the speed of the wheels according to the error committed on the turning angle by the system. In the following, it has been reported the pseudo-code that shows how the controller was implemented.
+In order to obtain this behaviour a PID controller can be applied to regulate the speed of the wheels according to the error committed on the turning angle by the system. After some testing, it turned out that just the proportional (P) and derivative (D) actions were sufficient to bring the system to the desired configuration with enough accuracy and without overshooting. In the following, it has been reported the pseudo-code that shows how such PD controller was implemented.
 
 #### _turn_ang()_ pseudo-code:
 ````python
