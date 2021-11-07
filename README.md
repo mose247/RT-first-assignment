@@ -138,13 +138,13 @@ function reach_target(target_coordinates):
 end function
 ````
 
-Finally, in order to move the target behind the robot, it has been defined a simple method that uses the functions `grab()` and `release()` already provided by the simulator library.
+Finally, in order to move the target behind the robot, it has been defined a very simple method that uses the functions `grab()` and `release()`, which are already provided by the simulator library.
 #### _move_behind()_ pseudo-code:
 ```` python
 function move_behind():
-    grab()
+    R.grab()
     turn_ang(180)
-    release()
+    R.release()
     turn_ang(-180)
 end function
 ````
