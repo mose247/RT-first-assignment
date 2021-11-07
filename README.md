@@ -126,8 +126,7 @@ In order to get the robot close to a target, the method `reach_target()` impleme
 
 #### _reach_target()_ pseudo-code:
 ```` python
-function reach_target(target_coord):
-    target_coordinates= serach_target()
+function reach_target(target_coordinates):
     dist= target_coordinates[0]
     angle= target_coordinates[1]
     
