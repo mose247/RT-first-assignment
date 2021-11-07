@@ -149,8 +149,8 @@ function move_behind():
 end function
 ````
 
-
-
+## Results and future improvements
+The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. The only abnormal beahviour was detected in some cases when the robot tries to align with a target it has detected: in fact, for particular positions of the target, the robot, instead of covering the smallest angle to align with it, turns in the opposite sense and covers the bigger one.
 
 
 
