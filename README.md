@@ -60,7 +60,7 @@ function turn_ang(ang):
     err= set_point - check_heading()
     step= 0
     
-    while(abs(err) > epsilon) do
+    while(abs(err) is not small enough) do
         t= current_milli_time()
         if(step == 0) do
             d_err= 0
@@ -70,14 +70,14 @@ function turn_ang(ang):
         end if
         
         speed= Kp*err + Kd*d_err
-        set_motors_power(speed)
+        turn(speed, 0.01)
         
         step++
         prevErr= err
         dt= current_milli_time() - t
     end while
     
-    set_motors_power(0)
+    stop motors
     
 end function
 ````
