@@ -70,7 +70,7 @@ function turn_ang(ang):
         end if
         
         speed= Kp*err + Kd*d_err
-        turn(speed, 0.01)
+        turn in place using speed
         
         step++
         prevErr= err
