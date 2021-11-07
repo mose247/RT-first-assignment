@@ -150,7 +150,13 @@ end function
 ````
 
 ## Results and future improvements
-The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. The only abnormal beahviour was detected in some cases when the robot tries to align with a target it has detected: in fact, for particular positions of the target, the robot, instead of covering the smallest angle to align with it, turns in the opposite sense and covers the bigger one.
+The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. 
+
+The only abnormal beahviour was detected in some cases when the robot tries to align with a target it has detected. In fact, for particular configurations of the target, the robot, instead of covering the smallest angle to align with it, turns in the opposite sense and covers the bigger one. This beahviour has been adressed to how the angles are encoded and the fact that it has been a PD controller to make the robot turn in place. Therefore:
+- if the control signal is negative, the robot turns counter-clockwise;
+- if the control signal is positive, the robot turns clockwise;
+
+Since this behaviour happens rarely and it doesn't compromise the execution of the other tasks, it hasn't been fixed. However, in the future might be solved.
 
 
 
