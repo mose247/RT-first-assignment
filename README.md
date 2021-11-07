@@ -152,9 +152,7 @@ end function
 ## Results and future improvements
 The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. 
 
-The only abnormal beahviour was detected in some cases when the robot had to align with a target that had found. In fact, for particular configurations of the target, the robot, instead of covering the smallest angle to align with it, turns in the opposite direction and covers the bigger one. This beahviour can be adressed to the sign of the controlling signal produced by the PD controller, in particular:
-- if the control signal is negative, the robot turns counter-clockwise;
-- if the control signal is positive, the robot turns clockwise;
+The only abnormal beahviour was sometimes detected when the robot had to align with a target before approaching it. In fact, for particular targets' configurations, the robot, instead of covering the smallest angle to align with them, turns in the opposite direction and covers the bigger one. This beahviour can be adressed to the sign of the controlling signal produced by the PD controller that was implemented in order to turn of a precise angle. In particular, if the control signal is negative, the robot turns counter-clockwise, while if positive, it turns clockwise.
 
 Since this problem happens not so frequently and it doesn't compromise the execution of the other tasks, it hasn't been fixed. However, in the future might be solved.
 
