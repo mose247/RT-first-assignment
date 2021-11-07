@@ -134,7 +134,7 @@ function reach_target(target_coordinates):
     while(dist is not small enough) do
         drive()
         update dist
-  
+    end while
 end function
 ````
 
