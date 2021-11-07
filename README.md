@@ -1,6 +1,6 @@
 # First Research Track I assignment - Luca Mosetti
 
-This assignment is based on a simple and portable robot simulator developed by [Student Robotics](https://studentrobotics.org). However, the arena in which the robot moves has been modified specifically for exercise.
+This assignment is based on a simple and portable robot simulator developed by [Student Robotics](https://studentrobotics.org). However, the arena in which the robot moves has been modified specifically for the exercise.
 
 ## Installing and runnning
 The simulator requires a Python 2.7 installation, the [pygame](https://www.pygame.org/news) library, [PyPyBox2D](https://pypi.org/project/pypybox2d/2.1-r331/) and [PyYAML](https://pypi.org/project/PyYAML/). Once that everything has been installed, in order to run the python script just write:
