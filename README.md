@@ -11,7 +11,7 @@ $ python run.py assignment1.py
 ## Exercise requirements
 The assignment requires to write a python script in order to make the robot drive counter-clockwise around the circuit while avoiding the golden boxes. Moreover, whenever it is close to a silver box, the robot should grab it and move it behind itself.
 
-## Structure of the _main()_
+## Logic of the _main()_ code:
 The logic that lays behind the main algorithm that has been implemented in order to achieve the exercise's goal is described by the following pseudo-code.
 
 #### Pseudo-code:
