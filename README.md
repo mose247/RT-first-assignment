@@ -156,5 +156,6 @@ The only abnormal beahviour was sometimes detected when the robot had to align w
 
 Since this problem happens not so frequently and it doesn't compromise the execution of the other tasks, it hasn't been fixed. However, in the future might be solved.
 
+![anomaly](https://user-images.githubusercontent.com/91455159/140932601-d9398874-41e0-452c-b4d0-e9aa45a03589.gif)
 
 
