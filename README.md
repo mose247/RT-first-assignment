@@ -152,7 +152,7 @@ end function
 ## Results and future improvements
 The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. 
 
-The only abnormal beahviour was sometimes detected when the robot had to align with a target before approaching it. In fact, for particular targets' configurations, the robot, instead of covering the smaller angle to align with them, turns in the opposite direction and covers the bigger one. This behaviour can be adressed to how the `heading` attribute of a `Robot` object is econded. In fact, after having converted it from radians to degrees, the angle varies in the range (-180°, 180°), where:
+The only abnormal beahviour was sometimes detected when the robot had to align with a target before approaching it. In fact, for particular targets' configurations, the robot, instead of covering the smaller angle to align with them, turns in the opposite direction and covers the bigger one. This behaviour can be adressed to how the `heading` attribute of a `Robot` object is econded. In fact, after having converted it from radians to degrees, the angle varies in the range (-180°, 180°). In particular:
 
 - 0° corresponds to the robot facing directly East;
 - 90° corresponds to the robot facing directly South;
