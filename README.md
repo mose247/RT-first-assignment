@@ -152,16 +152,14 @@ end function
 ## Results and future improvements
 The code has been tested for quite a few laps (around 10), during which the robot seemed very reliable in driving around the circuit and accomplish the tasks required by the assignment. 
 
-The only abnormal beahviour was sometimes detected when the robot had to align with a target before approaching it. In fact, for particular targets' configurations, the robot, instead of covering the smallest angle to align with them, turns in the opposite direction and covers the bigger one. This beahviour can be adressed to the sign of the controlling signal produced by the PD controller that was implemented for turning of a precise angle. In particular, if the control signal is negative, the robot turns counter-clockwise, while if positive, it turns clockwise.
-
-This behaviour can be adressed to how the `heading` attribute of a `Robot` object is econded. In fact, after having converted it from radians to degrees, the angle varies in the range (-180°, 180°), where:
+The only abnormal beahviour was sometimes detected when the robot had to align with a target before approaching it. In fact, for particular targets' configurations, the robot, instead of covering the smallest angle to align with them, turns in the opposite direction and covers the bigger one. This behaviour can be adressed to how the `heading` attribute of a `Robot` object is econded. In fact, after having converted it from radians to degrees, the angle varies in the range (-180°, 180°), where:
 
 - 0° corresponds to the robot facing directly East;
 - 90° corresponds to the robot facing directly South;
 - -90° corresponds to the robot facing directly North;
 - 180° or -180° corresponds to the robot facing directly West;
 
-Therefore, since the limits 180° and -180° cannot be exceed, when the robot has to pass from a positive heading (close to 180°) to a negative one (close to -180°), or viceversa, the turning logic implemented by the function `turn_ang()` doesn't make the robot cover the smaller angle but rather it makes the robot turn to decrese (or increase) its current heading step by step until the final desired heading is reached. 
+Therefore, since the limits 180° and -180° cannot be exceed, when the robot has to pass from a positive heading (close to 180°) to a negative one (close to -180°), or viceversa, the turning logic implemented by the function `turn_ang()` doesn't make the robot cover the smaller angle but rather makes it turn in the opposite way to decrese (or increase) its current heading step by step. 
 
 ![anomaly](https://user-images.githubusercontent.com/91455159/140932601-d9398874-41e0-452c-b4d0-e9aa45a03589.gif)
 
