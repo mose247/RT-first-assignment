@@ -74,7 +74,7 @@ function turn_ang(ang):
         
         step++
         prevErr= err
-        dt= compute the enlapsed time 
+        dt= compute the enlapsed time from the collection of the last error sample
     end while
     
     stop motors
