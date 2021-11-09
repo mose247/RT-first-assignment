@@ -159,7 +159,7 @@ The only abnormal beahviour was sometimes detected when the robot had to align w
 - -90° corresponds to the robot facing directly North;
 - 180° or -180° corresponds to the robot facing directly West;
 
-Therefore, since the limits -180° and 180° cannot be exceed, when the robot has to pass from a positive heading (close to 180°) to a negative one (close to -180°), or viceversa, the turning logic implemented by the function `turn_ang()` doesn't make the robot cover the smaller angle because this would imply, a disconinuity in the heading's values in correspondence of the jump from 180° to -180°, or viceversa. Instead, the function makes the robot turn in the opposite way in order to decrese (or increase) its current heading gradually until the final desired orientation is reached. 
+Therefore, when the robot has to pass from a positive heading (close to 180°) to a negative one (close to -180°), or viceversa, the turning logic implemented by the function `turn_ang()` makes it turn in such a way to decrese (or increase) its current heading gradually until the final desired orientation is reached. In other terms, according to the function that was written, the heading cannot jump from 180° to a -180° (or viceversa) istantaneously, which results in forcing the robot to cover the bigger angle in the particular situation that we're discussing.
 
 ![anomaly](https://user-images.githubusercontent.com/91455159/140932601-d9398874-41e0-452c-b4d0-e9aa45a03589.gif)
 
