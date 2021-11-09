@@ -23,7 +23,7 @@ function main():
             closest target position= search_target()
             if(a target has been found) do
                 reach_target() to move towards the target 
-                move_behind() to move the target behind
+                move_behind() to grab the target and move it behind
             else
                 drive() to move straight forward 
             end if
