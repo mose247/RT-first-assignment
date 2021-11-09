@@ -158,7 +158,3 @@ Since this problem happens not so frequently and it doesn't compromise the execu
 
 
 
-
-
-https://user-images.githubusercontent.com/91455159/140930398-c5c14dc7-75a9-4369-9d4b-abb2fe81c496.mov
-
