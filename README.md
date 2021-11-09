@@ -39,7 +39,7 @@ function main():
     end while
 end function
 ````
-In order to maintain the code simple and easily readable, all the necessary sub-tasks such as obstacles detection, targets interaction and motion have been implemented by some separate functions that are called back in the `main()`. The next paragraphs will focus on the explaination of these functions.
+In order to maintain the code simple and easy to read, all the necessary sub-tasks such as obstacles detection, targets interaction and motion have been implemented by some separate functions that are called back in the `main()`. The next paragraphs will focus on the explaination of these functions.
 
 ## Functions for moving the robot
 To drive the robot around the circuit have been developed three functions: `drive()`, `turn()` and `turn_ang()`. The first two are basic methods that are used, respectively, to make the robot move forward and turn in place by providing the wheels' speed and the time interval to maintain it. For instance, the following example shows how to use them to make the robot drive forward for 1 second and then turn in place for the same time interval by setting the motors at half of their power:
@@ -56,14 +56,14 @@ In order to obtain this behaviour a PID controller can be applied to regulate th
 #### _turn_ang()_ pseudo-code:
 ````python
 function turn_ang(ang):
-    set_point= check_heading() + ang
-    err= set_point - check_heading()
+    set point= check_heading() + ang
+    initial error= set_point - check_heading()
     step= 0
     
     while(abs(err) is not small enough) do
-        t= current_milli_time()
+        save the current time instant through current_milli_time()
         if(step == 0) do
-            d_err= 0
+            initialize the error derivate as 0
         else
             err= set_point - check_heading()
             d_err= (err - prevErr)/dt
@@ -74,7 +74,7 @@ function turn_ang(ang):
         
         step++
         prevErr= err
-        dt= current_milli_time() - t
+        dt= compute the enlapsed time 
     end while
     
     stop motors
@@ -99,18 +99,18 @@ function search_obstacle(direction):
         dist= 100
         
         if(direction is "forward") do
-            define forward angular range
+            set min_ang and max_ang in order to look forward
         else if(direction is "left")
-            define left angular range
+            set min_ang and max_ang in order to look left
         else if(direction is "right")
-            define right angular range
+            set min_ang and max_ang in order to look right
         end if
         
         for token in R.see() do
             if(token.marker_type is MARKER_TOKEN_GOLD) do
                 if(token.dist < dist and min_ang < token.rot_y < max_ang) do
-                    dist= token.dist
-                    ang= token.rot_y
+                    dist= token.dist to save the distance of the token
+                    ang= token.rot_y to save the angular position of the token
                 end if
             end if
         end for
@@ -127,8 +127,8 @@ In order to get the robot close to a target, the method `reach_target()` impleme
 #### _reach_target()_ pseudo-code:
 ```` python
 function reach_target(target_coordinates):
-    dist= target_coordinates[0]
-    angle= target_coordinates[1]
+    dist= get the first element of target_coordinates
+    angle= get the second element of target_coordinates
     
     turn_ang(angle)
     while(dist is not small enough) do
@@ -142,9 +142,9 @@ Finally, in order to move the target behind the robot, it has been defined a ver
 #### _move_behind()_ pseudo-code:
 ```` python
 function move_behind():
-    R.grab()
+    R.grab() to grab the target
     turn_ang(180)
-    R.release()
+    R.release() to release the target
     turn_ang(-180)
 end function
 ````
