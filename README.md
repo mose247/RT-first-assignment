@@ -18,22 +18,22 @@ The logic that lays behind the main algorithm that has been implemented in order
 ````python
 function main():
     while(1) do
-        call search_obstacle(forward) for saving the closest obstacle position
+        closest obstacle position= search_obstacle(forward)
         if(no obstacle too close in the front) do
-            call search_target() for saving the closest target position
+            closest target position= search_target()
             if(a target has been found) do
-                call reach_target() to move towards the target 
-                call move_behind() to move the target behind
+                reach_target() to move towards the target 
+                move_behind() to move the target behind
             else
-                drive forward through drive()
+                drive() to move straight forward 
             end if
         else
-            save the distance on the right with search_obstacle(right)
-            save the distance on the left with search_obstacle(left)
-            if(distance on the right is less than distance on the left) do
-                turn_left()
+            distance on the right= search_obstacle(right)
+            distance on the left= search_obstacle(left)
+            if(right distance is less than left distance) do
+                turn_left() to turn left
             else
-                turn_right()
+                turn_right() to turn right
             end if
         end if
     end while
