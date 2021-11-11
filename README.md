@@ -10,6 +10,7 @@ $ python run.py assignment1.py
 
 ## Exercise requirements
 The assignment requires to write a python script in order to make the robot drive counter-clockwise around the circuit while avoiding the golden boxes. Moreover, whenever it is close to a silver box, the robot should grab it and move it behind itself.
+
 <img width="951" alt="arena" src="https://user-images.githubusercontent.com/91455159/141338938-3069965a-e1ac-4962-a53e-8e0a7f54b665.png">
 
 ## Logic of the _main()_ code:
